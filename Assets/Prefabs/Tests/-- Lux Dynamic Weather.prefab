@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1000011680243292}
+  m_IsPrefabParent: 1
+--- !u!1 &1000011680243292
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000010726398638}
+  - 114: {fileID: 114000012589796620}
+  m_Layer: 0
+  m_Name: -- Lux Dynamic Weather
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4000010726398638
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011680243292}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.42195684, y: 0.9406842, z: -7.064439}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &114000012589796620
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011680243292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2af6af183043647e19fd64128fd574fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScriptControlledWeather: 1
+  TimeScale: 0.3
+  Temperature: 13.4
+  Rainfall: 0.857
+  RainIntensity: 0.857
+  SnowIntensity: 0
+  WetnessInfluenceOnAlbedo: 0.85
+  WetnessInfluenceOnSmoothness: 0.5
+  AccumulationRateWetness: 0.35
+  EvaporationRateWetness: 0.075
+  AccumulationRateCracks: 0.25
+  AccumulationRatePuddles: 0.2
+  EvaporationRateCracks: 0.2
+  EvaporationRatePuddles: 0.1
+  AccumulationRateSnow: 0.1
+  AccumulatedWetness: 0
+  AccumulatedCracks: 0
+  AccumulatedPuddles: 0.16
+  AccumulatedWater: 0.16
+  AccumulatedSnow: 0
+  WaterToSnow: 0
+  WaterToSnowTimeScale: 1
+  WaterToSnowCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0.25
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  SnowMelt: 1
+  SnowColor: {r: 1, g: 1, b: 1, a: 1}
+  SnowSpecularColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+  SnowScatterColor: {r: 0, g: 0, b: 0, a: 0}
+  SnowDiffuseScatteringBias: 0
+  SnowDiffuseScatteringContraction: 8
+  SnowMask: {fileID: 2800000, guid: 2b0476fc3208f4aa9a6bcc2419711a0e, type: 3}
+  SnowAndWaterBump: {fileID: 2800000, guid: f1d36994b5f864aa0ac4ba7db39c4b1c, type: 3}
+  SnowStartHeight: -100
+  SnowHeightBlending: 0
+  SnowParticleSystem: {fileID: 0}
+  MaxSnowParticlesEmissionRate: 3000
+  RainRipples: {fileID: 2800000, guid: 85404d8e834764f0eaa4280f93d7f58d, type: 3}
+  RippleTiling: 0.25
+  RippleAnimSpeed: 1
+  RippleRefraction: 0.5
+  RainParticleSystem: {fileID: 0}
+  MaxRainParticlesEmissionRate: 3000
+  SnowGIMasterRenderers:
+  - {fileID: 0}
