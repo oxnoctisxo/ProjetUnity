@@ -44,13 +44,15 @@ GameObject:
   - 135: {fileID: 135000010772237486}
   - 135: {fileID: 135000010224255096}
   - 54: {fileID: 54000011854025282}
-  m_Layer: 0
+  - 114: {fileID: 114000010082033270}
+  - 114: {fileID: 114000011228731034}
+  m_Layer: 11
   m_Name: FireBall
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1000011189069822
 GameObject:
   m_ObjectHideFlags: 1
@@ -218,6 +220,19 @@ Light:
   m_BounceIntensity: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114000010082033270
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010940180012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38a6cf15448669448aede89b5d15232e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  direction: {x: -0.9997537, y: 0.00000009677789, z: -0.022196412}
 --- !u!114 &114000010699340960
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -229,7 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00a3aa9a5cab79e4db503ff2172a8769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventsManager: {fileID: 0}
+  eventsManager: {fileID: 114000012640100746}
 --- !u!114 &114000011048656056
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -255,6 +270,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 1000011085011560, guid: 66270f06d0f8f6b49acb261452ec5df0,
     type: 2}
+--- !u!114 &114000011228731034
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010940180012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ae5d566bbcda5b45b47823977dfd96e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 2
 --- !u!114 &114000011277494316
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -278,7 +305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initHealth: 1
-  eventsManager: {fileID: 0}
+  eventsManager: {fileID: 114000012640100746}
   deathClip: {fileID: 0}
 --- !u!114 &114000012556338638
 MonoBehaviour:
@@ -318,8 +345,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39f2766bbb6e1cd488d3a1e7508d8b26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventsManager: {fileID: 0}
-  dieBehaviours: []
+  eventsManager: {fileID: 114000012640100746}
+  dieBehaviours:
+  - {fileID: 114000011072862290}
+  - {fileID: 114000011277494316}
 --- !u!135 &135000010224255096
 SphereCollider:
   m_ObjectHideFlags: 1
