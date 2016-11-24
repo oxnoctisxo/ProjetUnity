@@ -13,15 +13,6 @@ public class SimpleSpawner : MonoBehaviour {
     float timer;
     Ray shootRay;
     RaycastHit shootHit;
-    int shootableMask;
-    float effectsDisplayTime = 0.2f;
-
-
-    void Awake()
-    {
-        shootableMask = LayerMask.GetMask("Shootable");
-    }
-
 
     void Update()
     {
@@ -32,16 +23,8 @@ public class SimpleSpawner : MonoBehaviour {
             Spawn();
         }
 
-        if (timer >= spawnInterval * effectsDisplayTime)
-        {
-            DisableEffects();
-        }
     }
-    public void DisableEffects()
-    {
-    //    gunLine.enabled = false;
-     //   gunLight.enabled = false;
-    }
+  
 	public virtual GameObject Spawn() {
         timer = 0f;
 

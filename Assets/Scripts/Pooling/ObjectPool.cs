@@ -6,16 +6,19 @@ public class ObjectPool  {
 
 	private List<GameObject> pool = new List<GameObject> ();
 	public GameObject prefab;
+    GameObject parentFolder;
 
 	public ObjectPool(GameObject obj) {
 		prefab = obj;
+        parentFolder = new GameObject(obj.name + "Pool");
 	}
 
 	public GameObject GetObject(){
 		GameObject obj;
 		if (pool.Count == 0) {
-			obj = Object.Instantiate (prefab);
+            obj = Object.Instantiate(prefab);
 			obj.name = prefab.name;
+            obj.transform.parent = parentFolder.transform;
 			obj.SetActive (true);
 			return obj;
 		}
