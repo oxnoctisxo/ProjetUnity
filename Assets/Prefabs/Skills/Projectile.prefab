@@ -202,7 +202,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initHealth: 0
   eventsManager: {fileID: 0}
-  scoreValue: 10
   deathClip: {fileID: 0}
 --- !u!114 &114000010553572592
 MonoBehaviour:
