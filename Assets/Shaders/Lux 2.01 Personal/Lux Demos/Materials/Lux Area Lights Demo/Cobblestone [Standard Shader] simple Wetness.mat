@@ -213,7 +213,7 @@ Material:
       second: 1
     - first:
         name: _SnowSlopeDamp
-      second: 0.6
+      second: 0.91
     - first:
         name: _SnowTiling
       second: 2
@@ -298,7 +298,7 @@ Material:
       second: {r: 0, g: 1, b: 0, a: 0}
     - first:
         name: _WaterAccumulationCracksPuddles
-      second: {r: 1.31, g: 0, b: 1.28, a: 0}
+      second: {r: 1, g: 0, b: 1.28, a: 0}
     - first:
         name: _WaterAccumulationCracksPuddles2
       second: {r: 0, g: 1, b: 0, a: 1}

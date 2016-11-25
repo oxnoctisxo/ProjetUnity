@@ -68,8 +68,9 @@ public class SkillShooter : MonoBehaviour {
         PoolAfterXSeconds dieAfter = instance.GetComponent<PoolAfterXSeconds>();
 
 
-        shootRay.origin = transform.parent.position;
-        shootRay.direction = transform.parent.forward;
+        shootRay.origin = transform.position;
+        shootRay.direction = transform.forward;
+
         directionalMove.direction = shootRay.direction;
         directionalMove.speed = speed;
 
