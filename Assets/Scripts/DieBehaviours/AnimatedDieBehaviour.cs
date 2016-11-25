@@ -23,12 +23,9 @@ public class AnimatedDieBehaviour : AbstractAsyncDieBehaviour
 
     IEnumerator WaitForAnimationToEnd(GameObject deadObject)
     {
-        NavMeshAgent nav = deadObject.GetComponentInParent<NavMeshAgent>();
-        nav.enabled = false;
         anim.SetTrigger("Dead");
         yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
         deadObject.tag = oldTag;
-        nav.enabled = true;
         isFinished = true;
     }
 }

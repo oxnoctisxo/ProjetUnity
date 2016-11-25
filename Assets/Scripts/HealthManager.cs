@@ -46,6 +46,10 @@ public class HealthManager : MonoBehaviour {
 		initHealth = Mathf.Min (initHealth + healAmount, currentHealth);
 	}
 
+    public bool IsDead()
+    {
+        return currentHealth <= 0;
+    }
 
 	void Die() {
 		eventsManager.Die ();

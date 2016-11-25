@@ -7,26 +7,28 @@ public class EnemyMovement : MonoBehaviour
     //PlayerHealth playerHealth;
     //EnemyHealth enemyHealth;
     NavMeshAgent nav;
-
-
+    HealthManager healtMan;
     void Awake ()
     {
         player = GameObject.FindGameObjectWithTag ("Player").transform;
-        //playerHealth = player.GetComponent <PlayerHealth> ();
-        //enemyHealth = GetComponent <EnemyHealth> ();
+        healtMan = GetComponent<HealthManager>();
         nav = GetComponent <NavMeshAgent> ();
+
     }
 
 
     void Update ()
     {
-        //if(enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
-        //{
+
+  
+        if(!healtMan.IsDead())
+        {
             nav.SetDestination (player.position);
-        //}
-        //else
-        //{
-        //    nav.enabled = false;
-        //}
+        }
+        else
+        {
+            nav.enabled = false;
+           
+        }
     }
 }
