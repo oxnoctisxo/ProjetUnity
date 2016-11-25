@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CamShakeDieBehaviour : AbstractDieBehaviour {
+public class CamShakeDieBehaviour : AbstractAsyncDieBehaviour
+{
 
 	public float duration;
 	[Range(0,5)]
@@ -14,6 +15,8 @@ public class CamShakeDieBehaviour : AbstractDieBehaviour {
 		CamShake shake = (CamShake)Instantiate (shakeObj);
 		shake.duration = duration;
 		shake.magnitude = magnitude;
-	}
+        isFinished = true;
+
+    }
 
 }

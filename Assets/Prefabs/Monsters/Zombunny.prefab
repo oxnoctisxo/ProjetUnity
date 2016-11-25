@@ -126,8 +126,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: Infinity
   m_AngularDrag: Infinity
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
@@ -233,6 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e25225e423ba1b64590fd1fd06e0ffeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFinished: 0
 --- !u!114 &114000010626283286
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -271,6 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 079d46edc6efbf140aea6dfd441df528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFinished: 0
   score: 40
 --- !u!114 &114000011990171846
 MonoBehaviour:
@@ -329,6 +331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ad35c6aea7bc040b24343761303f2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFinished: 0
 --- !u!114 &114000014130556644
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -340,6 +343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32369cdb0508ad14fa2c9498e36c58ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFinished: 0
   explosionPrefab: {fileID: 1000011085011560, guid: 66270f06d0f8f6b49acb261452ec5df0,
     type: 2}
 --- !u!114 &114000014219821284
@@ -353,6 +357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d97227f3ca3d0ca47a1994cf9732f2e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFinished: 0
   dropTable: {fileID: 11400000, guid: e660d1b1b192d0044b2a1e72f11afd8b, type: 2}
 --- !u!135 &135000010561857468
 SphereCollider:

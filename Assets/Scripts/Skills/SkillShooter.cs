@@ -6,7 +6,7 @@ public class SkillShooter : MonoBehaviour {
     public GameObject parentObject;
     public bool useParentObjectLayer;
     public string input;
-
+    public int speed;
     public float spawnInterval = 0.15f;
     public float range = 100f;
 
@@ -64,16 +64,16 @@ public class SkillShooter : MonoBehaviour {
             instance.AddComponent<DirectionalMovement>();
         if (!instance.GetComponent<PoolAfterXSeconds>())
             instance.AddComponent<PoolAfterXSeconds>();
-        DirectionalMovement direction = instance.GetComponent<DirectionalMovement>();
+        DirectionalMovement directionalMove = instance.GetComponent<DirectionalMovement>();
         PoolAfterXSeconds dieAfter = instance.GetComponent<PoolAfterXSeconds>();
 
 
-        shootRay.origin = transform.position;
-        shootRay.direction = transform.forward;
-        direction.direction = shootRay.direction;
-        direction.speed = 10;
+        shootRay.origin = transform.parent.position;
+        shootRay.direction = transform.parent.forward;
+        directionalMove.direction = shootRay.direction;
+        directionalMove.speed = speed;
 
-        dieAfter.delay = range / (direction.speed * 5);
+        dieAfter.delay = range / (directionalMove.speed * 5);
         return instance;
 
     }

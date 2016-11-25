@@ -1,14 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DropDieBehaviour : AbstractDieBehaviour {
+public class DropDieBehaviour : AbstractAsyncDieBehaviour
+{
 
 	public DropTable dropTable;
 
 	public override void Die (GameObject deadObject)
 	{
 		Drop ();
-	}
+        isFinished = true;
+    }
 
 	public GameObject Drop() {
 		GameObject drop = dropTable.Drop ();
