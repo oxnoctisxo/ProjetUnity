@@ -581,8 +581,6 @@ GameObject:
   - 114: {fileID: 114000013995185654}
   - 114: {fileID: 114000014237413066}
   - 114: {fileID: 114000010628021108}
-  - 114: {fileID: 114000010978048150}
-  - 114: {fileID: 114000011791414420}
   m_Layer: 9
   m_Name: FireMonster2
   m_TagString: Ennemy
@@ -2319,7 +2317,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010369148710}
-  m_LocalRotation: {x: 0.5326752, y: 0.070340455, z: 0.83613276, w: -0.110415146}
+  m_LocalRotation: {x: 0.53267515, y: 0.07034045, z: 0.83613265, w: -0.11041513}
   m_LocalPosition: {x: 0.000022271464, y: -0.00006150465, z: 0.026027026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2592,21 +2590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a10dc340d5f4ec941acd10b1a5f7c879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initHealth: 0
-  eventsManager: {fileID: 0}
-  deathClip: {fileID: 0}
---- !u!114 &114000010978048150
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012196724494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a10dc340d5f4ec941acd10b1a5f7c879, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initHealth: 0
+  initHealth: 500
   eventsManager: {fileID: 0}
   deathClip: {fileID: 0}
 --- !u!114 &114000011202399042
@@ -2627,20 +2611,6 @@ MonoBehaviour:
     value: {x: 0, y: 0, z: 0}
     space: 1
   ignoreTimescale: 0
---- !u!114 &114000011791414420
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012196724494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a10dc340d5f4ec941acd10b1a5f7c879, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initHealth: 0
-  eventsManager: {fileID: 0}
-  deathClip: {fileID: 0}
 --- !u!114 &114000013274386070
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2823,7 +2793,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 4c5bd39a3b3d40c45ada08755d9ec08e, type: 2}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
